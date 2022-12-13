@@ -10,7 +10,7 @@
 코드 불러오기 : git clone https://github.com/sonkeehoon/wc_gui
 필요한 파이썬 패키지 설치
 패키지 한꺼번에 설치 : pip install -r requirements.txt
-설치 후 아래 순서대로 진행
+설치 후 아래 순서대로 실행
 
 1. gui_wc.py를 실행
 2. '검색어 입력' 란에 원하는 검색어를 입력 한다. (아직 '만들기' 버튼은 누르면 안된다!)
