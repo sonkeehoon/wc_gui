@@ -142,7 +142,7 @@ win.geometry('300x300')
 label = tk.Label(win, text="워드 클라우드 만들기")
 label.pack(pady = 5)
 
-# 검색어 입력 후 wc만들기
+# 검색어 입력 프레임
 frame = tk.LabelFrame(win,text="검색어 입력")
 frame.pack(fill = "x", padx = 5, pady = 5)
 
