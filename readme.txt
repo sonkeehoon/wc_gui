@@ -7,7 +7,7 @@
 
 컴퓨터에 파이썬이 설치되어 있다고 가정한다.
 ** 중요 **
-코드 불러오기 : git clone https://github.com/sonkeehoon/wc_gui
+코드 불러오기 : git clone 링크
 필요한 파이썬 패키지 설치
 패키지 한꺼번에 설치 : pip install -r requirements.txt
 설치 후 아래 순서대로 실행
