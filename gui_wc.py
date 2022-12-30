@@ -36,7 +36,7 @@ def naver_view_scrap(words):
     soup = BeautifulSoup(html,'html.parser')
     title = soup.find_all(class_ = "api_txt_lines total_tit")
     content = soup.find_all(class_ = "api_txt_lines dsc_txt")
-    # str_n 변수에 저장 
+    # 스크래핑 해온 텍스트들을 모아둘 str_n 변수에 저장 
     for t in title:
         str_n += t.get_text()
     for c in content:
