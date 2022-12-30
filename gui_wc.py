@@ -36,7 +36,7 @@ def naver_view_scrap(words):
     soup = BeautifulSoup(html,'html.parser')
     title = soup.find_all(class_ = "api_txt_lines total_tit")
     content = soup.find_all(class_ = "api_txt_lines dsc_txt")
-    # 스크래핑 해온 텍스트들을 모아둘 str_n 변수에 저장 
+    # 스크래핑 해온 텍스트를 str_n 변수에 저장
     for t in title:
         str_n += t.get_text()
     for c in content:
@@ -55,16 +55,16 @@ def naver_news_scrap(words):
     &news_office_checked=&nso=so:dd,p:from20190516to20220516,a:all&start=00"""
     str_n = ""
     for i in range(5):
-        url = url[:-2]+str(i)+"1"
+        url = url[:-2] + str(i) + "1"
         res = requests.get(url)
         res.raise_for_status()
         soup = BeautifulSoup(res.text,"lxml")
 
         l1 = soup.find_all("a",attrs={"class":"news_tit"})
         l2 = soup.find_all("a",attrs={"class":"api_txt_lines dsc_txt_wrap"})
-        l3 = l1+l2
+        l3 = l1 + l2
         for l in l3:
-            str_n = str_n+l.get_text()
+            str_n = str_n + l.get_text()
             
     return str_n
 
