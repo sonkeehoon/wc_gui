@@ -99,7 +99,7 @@ def makeWC(words):
     update_progress_bar(now_state)
 
     txt += naver_view_scrap(words)
-    now_state += 33
+    now_state += 34
     update_progress_bar(now_state)
     
             
