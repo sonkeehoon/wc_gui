@@ -162,6 +162,7 @@ txt_dest_path.pack(side = "left", fill = "x", expand = True, padx = 5, pady = 5,
 btn_dest_path = tk.Button(path_frame, text = "찾아보기", width = 10, command = browse_dest_path)
 btn_dest_path.pack(side = "right", padx = 5, pady = 5)
 
+# 진행상황
 frame_progress=tk.LabelFrame(win, text = "진행상황")
 frame_progress.pack(fill="x", padx = 5, pady = 5, ipady = 5)
 
