@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import urllib.request
 import urllib.parse
+from konlpy.tag import Okt
+from collections import Counter
 
 
 def update_progress_bar(state):
@@ -102,6 +104,35 @@ def makeWC(words):
     now_state += 34
     update_progress_bar(now_state)
     
+    
+    nlpy = Okt()
+    nouns = nlpy.nouns(txt)
+    count = Counter(nouns)
+    tag_count = []
+    tags = []
+
+    for n, c in count.most_common(50):
+        
+        dics = {'tag': n, 'count': c}
+
+        if len(dics['tag']) >= 2 and len(tags) <= 49:
+
+            tag_count.append(dics)
+
+            tags.append(dics['tag'])
+            
+            
+            
+    freq_file_name = words + "_frequency.txt"
+    freq_dest_path = os.path.join(txt_dest_path.get(),freq_file_name)
+    f = open(freq_dest_path,"w",encoding="utf-8")
+
+    for tag in tag_count:
+        
+        s = f" {tag['tag']:<14}"
+        f.write(str(s)+'\t'+str(tag['count'])+'\n')
+    
+    
             
     wordcloud = WordCloud(
         font_path = 'malgun.ttf',
@@ -129,7 +160,7 @@ def btnClick():
     try:
         words = text.get()
         makeWC(words)
-        msgbox.showinfo("생성 완료", "워드 클라우드가 생성 되었습니다\n저장 경로를 확인하세요")
+        msgbox.showinfo("생성 완료", "워드 클라우드 생성과 빈도수 분석이 완료되었습니다\n저장 경로를 확인하세요")
         
     except Exception as err:
         msgbox.showerror("error",err)
