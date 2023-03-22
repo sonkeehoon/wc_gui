@@ -97,11 +97,11 @@ def makeWC(words):
     now_state = 0
     # 뉴스 검색 결과 크롤링
     txt += naver_news_scrap(words)
-    now_state += 33
+    now_state += 25
     update_progress_bar(now_state)
 
     txt += naver_view_scrap(words)
-    now_state += 34
+    now_state += 25
     update_progress_bar(now_state)
     
     
@@ -132,7 +132,8 @@ def makeWC(words):
         s = f" {tag['tag']:<14}"
         f.write(str(s)+'\t'+str(tag['count'])+'\n')
     
-    
+    now_state += 25
+    update_progress_bar(now_state)
             
     wordcloud = WordCloud(
         font_path = 'malgun.ttf',
@@ -146,7 +147,7 @@ def makeWC(words):
     file_name = words + ".jpg"
     dest_path = os.path.join(txt_dest_path.get(),file_name)
     plt.savefig(dest_path)
-    now_state += 33
+    now_state += 25
     update_progress_bar(now_state)
 
 def btnClick():
