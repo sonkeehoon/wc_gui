@@ -12,8 +12,7 @@
 ** 중요 **
 1.1 버전 부터는 설치된 파이썬이 32bit인 경우에는 실행할수 없습니다!
 코드 불러오기 : git clone 링크
-필요한 파이썬 패키지 설치
-패키지 한꺼번에 설치 : pip install -r requirements.txt
+필요한 파이썬 패키지 설치 : pip install -r requirements.txt
 설치 후 아래 순서대로 실행
 
 1. gui_wc.py를 실행
