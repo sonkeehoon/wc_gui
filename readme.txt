@@ -38,7 +38,7 @@ Java JDK 설치 및 환경설정 방법 : https://languagestory.tistory.com/11
 pyinstaller 관련...
 파이썬 프로그램을 .exe 실행 파일로 변환하는 방법을 pyinstaller를 통해 시도해 보았으나..
 유튜브에 있는 예제들은 잘 변환이 됐으나 내가 만든 gui_wc.py는 변환해도 실행되지 않았다.
-결론은 이 프로그램을 실행하려면 컴퓨터에 python과 JAVA JDK가 설치되어 있어야 한다.
+결론 : 이 프로그램을 실행하려면 컴퓨터에 python과 JAVA JDK가 설치되어 있어야 한다.
 
 
 
