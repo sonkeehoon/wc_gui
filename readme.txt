@@ -10,7 +10,7 @@
 
 컴퓨터에 파이썬(64bit버전)이 설치되어 있다고 가정한다.
 ** 중요 **
-Java JDK는 반드시 설치해야 합니다.
+Java JDK는 반드시 필수입니다.
 Java JDK 설치 및 환경설정 방법 : https://languagestory.tistory.com/11
 1.1 버전 부터는 설치된 파이썬이 32bit인 경우에는 실행할수 없습니다!
 코드 불러오기 : git clone 링크
