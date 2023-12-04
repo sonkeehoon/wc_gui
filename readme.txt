@@ -13,7 +13,6 @@
 Java JDK는 반드시 필수입니다.
 Java JDK 설치 및 환경설정 방법 : https://languagestory.tistory.com/11
 1.1 버전 부터는 설치된 파이썬이 32bit인 경우에는 실행할수 없습니다!
-코드 불러오기 : git clone 링크
 필요한 파이썬 패키지 설치 : pip install -r requirements.txt
 설치 후 아래 순서대로 실행
 
