@@ -92,7 +92,7 @@ def exit_window_x(): # x버튼을 눌러도 종료되지 않던 버그를 수정
     win.quit() 
 
 def makeWC(words):
-    cand_mask = np.array(Image.open(resource_path('./circle.jpg'))) # 동그란 워드클라우드를 만들기 위한 판
+    cand_mask = np.array(Image.open(resource_path('./circle.png'))) # 동그란 워드클라우드를 만들기 위한 판
     txt = ""
     now_state = 0
     # 뉴스 검색 결과 크롤링
@@ -141,10 +141,10 @@ def makeWC(words):
         mask = cand_mask
     ).generate(txt)
     
-    plt.figure(figsize = (10,8))
+    plt.figure(figsize = (8,8))
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
-    file_name = words + ".jpg"
+    file_name = words + ".png"
     dest_path = os.path.join(txt_dest_path.get(),file_name)
     plt.savefig(dest_path)
     now_state += 25
